@@ -1,0 +1,10 @@
+.navbar {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	background-color: rgba(74, 245, 32, 0.614);
+	padding: 1rem;
+	margin-top: 2em;
+}
