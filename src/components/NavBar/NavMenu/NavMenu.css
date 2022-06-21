@@ -6,6 +6,11 @@
 }
 
 .navmenu_ul > li {
-	margin: 20px;
+	margin-inline: 5px;
 	font-size: 1.5rem;
+}
+
+.navmenu_ul > li:hover {
+	padding: 5px;
+	font-size: 1.75rem;
 }
