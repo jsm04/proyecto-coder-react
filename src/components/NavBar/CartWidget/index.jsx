@@ -4,10 +4,10 @@ import './CartWidget.css';
 
 const CartWidget = () => {
 	return (
-		<div class="c">
+		<div>
 			<a href="./#" className="cart">
-				<img src={cart} alt="Shopping Cart" width="67" />
-				<h3>Items</h3>
+				<img src={cart} alt="Shopping Cart" width="50" />
+				<h3>0</h3>
 			</a>
 		</div>
 	);

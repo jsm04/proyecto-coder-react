@@ -1,4 +1,5 @@
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 import './App.css';
 
 const App = () => {
@@ -7,6 +8,9 @@ const App = () => {
 			<header>
 				<NavBar />
 			</header>
+			<main>
+				<ItemListContainer greeting="This is ItemListContainer prop" />
+			</main>
 		</div>
 	);
 };

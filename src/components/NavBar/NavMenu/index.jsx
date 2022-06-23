@@ -10,10 +10,10 @@ const menuItems = [
 const NavMenu = () => {
 	return (
 		<ul className="navmenu_ul">
-			{menuItems.map((item) => {
+			{menuItems.map(item => {
 				return (
-					<li>
-						<a href="/" key={item.id}>
+					<li key={item.id}>
+						<a href="/" alt="Categories menu links">
 							{item.label}
 						</a>
 					</li>
