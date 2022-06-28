@@ -4,3 +4,13 @@
 	margin-bottom: 0.5em;
 	margin-top: 3%;
 }
+
+.items-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 95%;
+	flex-wrap: wrap;
+	gap: 30px;
+}

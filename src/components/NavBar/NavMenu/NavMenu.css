@@ -1,16 +1,18 @@
 .navmenu_ul {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
+	justify-content: space-between;
+	width: 25%;
 }
 
 .navmenu_ul > li {
-	margin-inline: 5px;
 	font-size: 1.5rem;
+	background: linear-gradient(currentColor 0 0) bottom / var(--d, 0)
+		3px no-repeat;
+	transition: 0.5s;
 }
 
 .navmenu_ul > li:hover {
-	padding: 5px;
-	font-size: 1.75rem;
+	color: rgb(28, 28, 28);
+	--d: 100%;
 }

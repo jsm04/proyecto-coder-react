@@ -8,8 +8,8 @@ const App = () => {
 			<header>
 				<NavBar />
 			</header>
-			<main>
-				<ItemListContainer greeting="This is ItemListContainer prop" />
+			<main className="app-main">
+				<ItemListContainer SearchTitle="Celulares" />
 			</main>
 		</div>
 	);
