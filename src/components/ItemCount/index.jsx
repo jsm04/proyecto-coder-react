@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ name, stock }) => {
+const ItemCount = ({ name, stock, onAdd }) => {
 	const [amount, setAmount] = useState(1);
 
 	const buttonIncrease = () => {
@@ -16,9 +16,14 @@ const ItemCount = ({ name, stock }) => {
 		}
 	};
 
+	const buttonAdd = () => {
+		if (stock > 0) onAdd(amount);
+		if (stock == 0) alert(`${name} no disponible`);
+	};
+
 	return (
 		<section className="item-count-container">
-			<h3 className="item-count-title">{name || 'Undefined'} </h3>
+			<h3 className="item-count-title">{name || '...'} </h3>
 			<div className="item-count-body">
 				<button onClick={buttonDecrease} className="minus">
 					-
@@ -29,7 +34,10 @@ const ItemCount = ({ name, stock }) => {
 				</button>
 			</div>
 			<span className="stock">En stock: {stock}</span>
-			<button className="item-count-to-cart">
+			<button
+				onClick={() => buttonAdd()}
+				className="item-count-to-cart"
+			>
 				Agregar al carrito
 			</button>
 		</section>
