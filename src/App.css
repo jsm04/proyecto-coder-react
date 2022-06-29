@@ -1,5 +1,9 @@
 .app {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 800px;
 }
 
 header {
@@ -15,9 +19,6 @@ main {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 .app-main {

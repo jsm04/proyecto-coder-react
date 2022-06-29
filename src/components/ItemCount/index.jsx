@@ -18,7 +18,7 @@ const ItemCount = ({ name, stock, onAdd }) => {
 
 	const buttonAdd = () => {
 		if (stock > 0) onAdd(amount);
-		if (stock == 0) alert(`${name} no disponible`);
+		if (stock === 0) alert(`${name} no disponible`);
 	};
 
 	return (

@@ -10,8 +10,22 @@
 	margin: auto;
 }
 
-.navbar > h1 {
+.navbar h1 {
 	font-size: 1.5rem;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.navbar form {
+}
+
+.navbar form input {
+	padding: 10px;
+	outline: none;
+}
+
+@media (max-width: 920px) {
+	.navbar {
+		display: none;
+	}
 }

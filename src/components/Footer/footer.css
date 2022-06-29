@@ -1,0 +1,25 @@
+footer {
+	padding: 20px;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #777;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+footer .icon {
+	font-size: 50px;
+	width: 30%;
+}
+
+footer ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 10px;
+	gap: 15px;
+	justify-content: space-around;
+	cursor: pointer;
+	margin: auto;
+}

@@ -2,11 +2,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 25%;
 }
 
 .navmenu_ul > li {
 	font-size: 1.5rem;
+	margin: 0 10px 0;
 	background: linear-gradient(currentColor 0 0) bottom / var(--d, 0)
 		3px no-repeat;
 	transition: 0.5s;
