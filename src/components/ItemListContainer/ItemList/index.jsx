@@ -1,5 +1,5 @@
 import React from 'react';
-import Items from '../Items';
+import Items from './Items';
 import './itemlist.css';
 
 // va a retornar la cantidad de items segun la prop de data que le pasemos
