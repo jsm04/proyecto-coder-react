@@ -5,7 +5,7 @@
 	margin: 3% 0;
 }
 
-.items-container {
+.itemslist-container {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;

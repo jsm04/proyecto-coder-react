@@ -29,3 +29,22 @@ main {
 	justify-content: center;
 	align-items: center;
 }
+
+.loading-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 150px;
+}
+
+.loading {
+	font-size: 4rem;
+	font-weight: bolder;
+	animation: spinner 0.8s ease infinite;
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}

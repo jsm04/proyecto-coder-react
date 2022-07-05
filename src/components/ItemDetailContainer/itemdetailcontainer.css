@@ -1,0 +1,17 @@
+.itemlist-h3 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	margin: 3% 0;
+}
+
+.items-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
