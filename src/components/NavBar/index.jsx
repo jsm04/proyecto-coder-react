@@ -15,9 +15,9 @@ const NavBar = () => {
 				<form>
 					<input type="text" placeholder="Busca productos, marcas y mas..." />
 				</form>
-				<Link to="/cart">
+				<NavLink to="/cart">
 					<CartWidget />
-				</Link>
+				</NavLink>
 			</nav>
 		</>
 	);
