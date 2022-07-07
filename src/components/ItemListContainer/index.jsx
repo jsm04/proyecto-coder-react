@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './itemlistcontainer.css';
-import ItemList from './ItemList';
-import products from '../../utils/fakeData';
 import { AiOutlineLoading } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
+import ItemList from './ItemList';
+import products from '../../utils/fakeData';
+import './itemlistcontainer.css';
 
 // item list container
 const ItemListContainer = ({ containerTitle }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState([]);
 	const { categoriaId } = useParams();
+	console.log(categoriaId);
+
 	useEffect(() => {
 		const getData = new Promise((resolve) => {
 			setTimeout(() => {
@@ -25,9 +27,9 @@ const ItemListContainer = ({ containerTitle }) => {
 		}
 	}, [categoriaId]);
 
-	const onAdd = (quantity) => {
-		alert(`${quantity} ${quantity > 1 ? 'items' : 'item'} agregado al carrito de compras.`);
-	};
+	// const onAdd = (quantity) => {
+	// 	alert(`${quantity} ${quantity > 1 ? 'items' : 'item'} agregado al carrito de compras.`);
+	// };
 
 	if (isLoading) {
 		return (

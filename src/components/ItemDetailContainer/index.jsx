@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ItemDetail from './ItemDetail';
-import './itemdetailcontainer.css';
-import products from '../../utils/fakeData';
-import { AiOutlineLoading } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
+import { AiOutlineLoading } from 'react-icons/ai';
+import ItemDetail from './ItemDetail';
+import products from '../../utils/fakeData';
+import './itemdetailcontainer.css';
 
 const ItemDetailContainer = () => {
 	const [data, setData] = useState({});
@@ -18,14 +18,13 @@ const ItemDetailContainer = () => {
 			}, 7000);
 		});
 
-		// getData.then((res) => setData(res[2]));
 		getData.then((res) => setData(res.find((product) => product.id === parseInt(detalleId))));
 	}, []);
 
 	if (isLoading) {
 		return (
 			<div className="loading-container">
-				<AiOutlineLoading className="loading" />;
+				<AiOutlineLoading className="loading" />
 			</div>
 		);
 	}

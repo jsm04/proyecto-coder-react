@@ -9,6 +9,7 @@ const ItemList = ({ data }) => {
 			{data.map((product) => (
 				<Items
 					key={product.id}
+					id={product.id}
 					name={product.name}
 					price={product.price}
 					image={product.image}

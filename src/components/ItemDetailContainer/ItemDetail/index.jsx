@@ -1,10 +1,7 @@
 import React from 'react';
 import './itemdetail.css';
 
-// item list container
-
 const ItemDetail = ({ data }) => {
-	console.log({ data });
 	return (
 		<div className="items-detail-container">
 			<img src={data.image} alt="Imagen descriptiva del producto." />
