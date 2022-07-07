@@ -1,8 +1,8 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import NavMenu from './NavMenu';
 import './navbar.css';
-import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 	return (
@@ -15,7 +15,9 @@ const NavBar = () => {
 				<form>
 					<input type="text" placeholder="Busca productos, marcas y mas..." />
 				</form>
-				<CartWidget />
+				<Link to="/cart">
+					<CartWidget />
+				</Link>
 			</nav>
 		</>
 	);

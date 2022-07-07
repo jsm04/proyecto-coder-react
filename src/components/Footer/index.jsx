@@ -1,6 +1,6 @@
 import React from 'react';
-import './footer.css';
 import { IoAirplane } from 'react-icons/io5';
+import './footer.css';
 
 const Footer = () => {
 	return (

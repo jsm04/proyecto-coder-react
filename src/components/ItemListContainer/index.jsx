@@ -27,10 +27,6 @@ const ItemListContainer = ({ containerTitle }) => {
 		}
 	}, [categoriaId]);
 
-	// const onAdd = (quantity) => {
-	// 	alert(`${quantity} ${quantity > 1 ? 'items' : 'item'} agregado al carrito de compras.`);
-	// };
-
 	if (isLoading) {
 		return (
 			<div className="loading-container">

@@ -1,9 +1,11 @@
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import ItemListContainer from './components/ItemListContainer';
-import './App.css';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import CartContainer from './components/CartContainer';
+import Footer from './components/Footer';
+import './App.css';
 
 const App = () => {
 	return (
@@ -17,6 +19,7 @@ const App = () => {
 						<Route path="/" element={<ItemListContainer containerTitle="Catalogo" />} />
 						<Route path="/categoria/:categoriaId" element={<ItemListContainer containerTitle />} />
 						<Route path="/detalles/:detalleId" element={<ItemDetailContainer />} />
+						<Route path="/cart" element={<CartContainer />} />
 					</Routes>
 				</main>
 				<Footer />
