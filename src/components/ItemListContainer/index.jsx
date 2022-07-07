@@ -10,7 +10,6 @@ const ItemListContainer = ({ containerTitle }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState([]);
 	const { categoriaId } = useParams();
-	console.log(categoriaId);
 
 	useEffect(() => {
 		const getData = new Promise((resolve) => {

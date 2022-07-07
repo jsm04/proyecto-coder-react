@@ -5,7 +5,7 @@ import ItemDetail from './ItemDetail';
 import products from '../../utils/fakeData';
 import './itemdetailcontainer.css';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ containerTitle }) => {
 	const [data, setData] = useState({});
 	const [isLoading, setLoading] = useState(true);
 	const { detalleId } = useParams();
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
 
 	return (
 		<>
-			<h3 className="itemlist-h3">Detalles</h3>
+			<h3 className="itemlist-h3">{containerTitle}</h3>
 			<div className="items-container">
 				<ItemDetail data={data} />
 			</div>
