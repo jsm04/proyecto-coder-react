@@ -3,40 +3,43 @@ import './itemlistcontainer.css';
 import ItemList from './ItemList';
 import products from '../../utils/fakeData';
 import { AiOutlineLoading } from 'react-icons/ai';
+import { useParams } from 'react-router-dom';
 
 // item list container
-const ItemListContainer = ({ SearchTitle }) => {
+const ItemListContainer = ({ containerTitle }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState([]);
+	const { categoriaId } = useParams();
 	useEffect(() => {
 		const getData = new Promise((resolve) => {
 			setTimeout(() => {
 				resolve(products);
 				setLoading(false);
-			}, 5000);
+			}, 1000);
 		});
-		getData.then((res) => setData(res));
-	}, []);
+
+		if (categoriaId) {
+			getData.then((res) => setData(res.filter((categoryName) => categoryName.category === categoriaId)));
+		} else {
+			getData.then((res) => setData(res));
+		}
+	}, [categoriaId]);
 
 	const onAdd = (quantity) => {
-		alert(
-			`${quantity} ${
-				quantity > 1 ? 'items' : 'item'
-			} agregado al carrito de compras.`
-		);
+		alert(`${quantity} ${quantity > 1 ? 'items' : 'item'} agregado al carrito de compras.`);
 	};
 
 	if (isLoading) {
 		return (
 			<div className="loading-container">
-				<AiOutlineLoading className="loading" />;
+				<AiOutlineLoading className="loading" />
 			</div>
 		);
 	}
 
 	return (
 		<>
-			<h3 className="itemlist-h3">{SearchTitle}</h3>
+			<h3 className="itemlist-h3">{containerTitle}</h3>
 			<div className="itemslist-container">
 				<ItemList data={data} />
 			</div>

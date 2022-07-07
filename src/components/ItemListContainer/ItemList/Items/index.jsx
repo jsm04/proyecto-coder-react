@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './items.css';
 
 const Items = ({ id, name, stock, image, price }) => {
@@ -11,9 +11,7 @@ const Items = ({ id, name, stock, image, price }) => {
 			</div>
 			<div className="item-body"></div>
 			<span className="item-price-tag">{price}</span>
-			<button className="item-details">
-				Ver detalle del producto
-			</button>
+			<button className="item-details">Ver detalle del producto</button>
 			<div className="stock">En stock: {stock}</div>
 		</section>
 	);

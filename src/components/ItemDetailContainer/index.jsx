@@ -3,10 +3,12 @@ import ItemDetail from './ItemDetail';
 import './itemdetailcontainer.css';
 import products from '../../utils/fakeData';
 import { AiOutlineLoading } from 'react-icons/ai';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
 	const [data, setData] = useState({});
 	const [isLoading, setLoading] = useState(true);
+	const { detalleId } = useParams();
 
 	useEffect(() => {
 		const getData = new Promise((resolve) => {
@@ -16,7 +18,8 @@ const ItemDetailContainer = () => {
 			}, 7000);
 		});
 
-		getData.then((res) => setData(res[2]));
+		// getData.then((res) => setData(res[2]));
+		getData.then((res) => setData(res.find((product) => product.id === parseInt(detalleId))));
 	}, []);
 
 	if (isLoading) {
