@@ -47,3 +47,15 @@
 	max-width: fit-content;
 	text-align: justify;
 }
+
+.item-to-cart {
+	outline: #007bff solid 2px;
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+}
+
+.item-to-cart:hover {
+	background-color: #007bff;
+	color: white;
+}
