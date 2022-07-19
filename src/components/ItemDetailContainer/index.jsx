@@ -15,10 +15,12 @@ const ItemDetailContainer = ({ containerTitle }) => {
 			setTimeout(() => {
 				resolve(products);
 				setLoading(false);
-			}, 5000);
+			}, 1000);
 		});
 
-		getData.then((res) => setData(res.find((product) => product.id === parseInt(detalleId))));
+		getData.then((res) =>
+			setData(res.find((product) => product.id === parseInt(detalleId)))
+		);
 	}, [detalleId]);
 
 	if (isLoading) {

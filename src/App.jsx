@@ -13,11 +13,13 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<div className="app">
-				<CartProvider value="test">
-					<header>
+				<header>
+					<CartProvider>
 						<NavBar />
-					</header>
-					<main className="app-main">
+					</CartProvider>
+				</header>
+				<main className="app-main">
+					<CartProvider>
 						<Routes>
 							<Route
 								path="/"
@@ -33,8 +35,8 @@ const App = () => {
 							/>
 							<Route path="/cart" element={<CartContainer />} />
 						</Routes>
-					</main>
-				</CartProvider>
+					</CartProvider>
+				</main>
 				<Footer />
 			</div>
 		</BrowserRouter>
