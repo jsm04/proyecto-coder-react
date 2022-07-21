@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import { AiOutlineLoading } from 'react-icons/ai';
 import ItemDetail from './ItemDetail';
-import products from '../../utils/fakeData';
 import './itemdetailcontainer.css';
 
 const ItemDetailContainer = ({ containerTitle }) => {
@@ -11,16 +11,10 @@ const ItemDetailContainer = ({ containerTitle }) => {
 	const { detalleId } = useParams();
 
 	useEffect(() => {
-		const getData = new Promise((resolve) => {
-			setTimeout(() => {
-				resolve(products);
-				setLoading(false);
-			}, 1000);
-		});
-
-		getData.then((res) =>
-			setData(res.find((product) => product.id === parseInt(detalleId)))
-		);
+		const queryDb = getFirestore();
+		const queryDoc = doc(queryDb, 'products', detalleId);
+		getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
+		setLoading(false);
 	}, [detalleId]);
 
 	if (isLoading) {
